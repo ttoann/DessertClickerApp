@@ -1,7 +1,8 @@
-Dessert Clicker app
-=====================
+Student Name: Nguyễn Tiến Toàn
 
-Code for Android Basics with Compose Codelab.
+Student ID: 22110078
+
+Project: Dessert Clicker app
 
 Introduction
 ------------
