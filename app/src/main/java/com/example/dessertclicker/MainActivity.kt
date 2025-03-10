@@ -180,6 +180,10 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
     }
 }
 
+/**
+ * Composable chính của ứng dụng.
+ * Nó nhận dữ liệu từ ViewModel và truyền xuống các thành phần UI con.
+ */
 @Composable
 private fun DessertClickerApp(
     viewModel: DessertViewModel = viewModel()
@@ -192,6 +196,9 @@ private fun DessertClickerApp(
     )
 }
 
+/**
+ * Giao diện chính của ứng dụng
+ */
 @Composable
 private fun DessertClickerApp(
     uiState: DessertUIState,
@@ -227,6 +234,9 @@ private fun DessertClickerApp(
     }
 }
 
+/**
+ * Thanh công cụ hiển thị tiêu đề ứng dụng và nút chia sẻ
+ */
 @Composable
 private fun DessertClickerAppBar(
     onShareButtonClicked: () -> Unit,
@@ -256,6 +266,9 @@ private fun DessertClickerAppBar(
     }
 }
 
+/**
+ * Màn hình chính hiển thị doanh thu, số lượng dessert đã bán và hình ảnh hai loại dessert.
+ */
 @Composable
 fun DessertClickerScreen(
     revenue: Int,
@@ -275,6 +288,7 @@ fun DessertClickerScreen(
             contentScale = ContentScale.Crop
         )
         Column {
+            // Hàng chứa hai hình ảnh dessert
             Row(
                 modifier = Modifier
                     .weight(1f)
