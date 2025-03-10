@@ -209,6 +209,7 @@ private fun DessertClickerApp(
     Scaffold(
         topBar = {
             val intentContext = LocalContext.current
+            val layoutDirection = LocalLayoutDirection.current
             DessertClickerAppBar(
                 onShareButtonClicked = {
                     shareSoldDessertsInformation(
@@ -216,7 +217,16 @@ private fun DessertClickerApp(
                         dessertsSold = uiState.dessertsSold,
                         revenue = uiState.revenue
                     )
-                }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        start = WindowInsets.safeDrawing.asPaddingValues()
+                            .calculateStartPadding(layoutDirection),
+                        end = WindowInsets.safeDrawing.asPaddingValues()
+                            .calculateEndPadding(layoutDirection),
+                    )
+                    .background(MaterialTheme.colorScheme.primary)
             )
         }
     ) { contentPadding ->
